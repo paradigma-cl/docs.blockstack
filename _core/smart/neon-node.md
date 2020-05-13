@@ -140,6 +140,11 @@ stacks-node start --config=./testnet/stacks-node/conf/neon-miner-conf.toml
 
 Your node should start. It will take some time to sync, and then your miner will be running!
 
+In case you are helping in the test phases of the net, you could update the code, compile and run the new version
+```
+git pull
+RUST_BACKTRACE=FULL BLOCKSTACK_DEBUG=1 cargo testnet start --config=./testnet/stacks-node/conf/neon-miner-conf.toml
+```
 ### Creating an optimized binary
 
 The steps above are great for trying to run a node temporarily. If you want to host a node on a server somewhere, you might want to generate an optimized binary. To do so, use the same configuration as above, but run:
